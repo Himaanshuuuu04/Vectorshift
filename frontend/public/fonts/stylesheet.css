@@ -1,0 +1,39 @@
+@font-face {
+    font-family: 'Studio Feixen Sans Lahti';
+    src: url('StudioFeixenSansLahti-Bold.eot');
+    src: local('Studio Feixen Sans Lahti Bold'), local('StudioFeixenSansLahti-Bold'),
+        url('StudioFeixenSansLahti-Bold.eot?#iefix') format('embedded-opentype'),
+        url('StudioFeixenSansLahti-Bold.woff2') format('woff2'),
+        url('StudioFeixenSansLahti-Bold.woff') format('woff'),
+        url('StudioFeixenSansLahti-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Studio Feixen Sans Lahti Headline';
+    src: url('StudioFeixenSansLahti-Headline.eot');
+    src: local('Studio Feixen Sans Lahti Headline'), local('StudioFeixenSansLahti-Headline'),
+        url('StudioFeixenSansLahti-Headline.eot?#iefix') format('embedded-opentype'),
+        url('StudioFeixenSansLahti-Headline.woff2') format('woff2'),
+        url('StudioFeixenSansLahti-Headline.woff') format('woff'),
+        url('StudioFeixenSansLahti-Headline.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Studio Feixen Sans Lahti Book';
+    src: url('StudioFeixenSansLahti-Book.eot');
+    src: local('Studio Feixen Sans Lahti Book'), local('StudioFeixenSansLahti-Book'),
+        url('StudioFeixenSansLahti-Book.eot?#iefix') format('embedded-opentype'),
+        url('StudioFeixenSansLahti-Book.woff2') format('woff2'),
+        url('StudioFeixenSansLahti-Book.woff') format('woff'),
+        url('StudioFeixenSansLahti-Book.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+

@@ -1,0 +1,117 @@
+/* Toolbar and Node Palette Styling */
+
+/* Icon entrance animation for palette items */
+@keyframes paletteIconPop {
+  0% {
+    opacity: 0;
+    transform: scale(0) rotate(-90deg);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.15) rotate(5deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+/* Icon wiggle animation on hover */
+@keyframes iconWiggle {
+  0%, 100% {
+    transform: rotate(0deg) scale(1);
+  }
+  25% {
+    transform: rotate(-8deg) scale(1.1);
+  }
+  75% {
+    transform: rotate(8deg) scale(1.1);
+  }
+}
+
+/* Draggable node icon animations - for both SVG and emoji */
+[draggable="true"] [style*="filter"] svg,
+[draggable="true"] span[style*="fontSize: 24px"] {
+  display: inline-block;
+  animation: paletteIconPop 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: transform 0.2s ease;
+}
+
+/* Icon wiggle on hover - for both SVG and emoji */
+[draggable="true"]:hover [style*="filter"] svg,
+[draggable="true"]:hover span[style*="fontSize: 24px"] {
+  animation: iconWiggle 0.5s ease;
+}
+
+/* Staggered entrance animation for palette items */
+[draggable="true"].customInput {
+  animation: slideInPalette 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0s forwards;
+}
+
+[draggable="true"].llm {
+  animation: slideInPalette 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.05s forwards;
+}
+
+[draggable="true"].customOutput {
+  animation: slideInPalette 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.1s forwards;
+}
+
+[draggable="true"].text {
+  animation: slideInPalette 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.15s forwards;
+}
+
+[draggable="true"].filter {
+  animation: slideInPalette 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.2s forwards;
+}
+
+[draggable="true"].transform {
+  animation: slideInPalette 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.25s forwards;
+}
+
+[draggable="true"].api {
+  animation: slideInPalette 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.3s forwards;
+}
+
+[draggable="true"].conditional {
+  animation: slideInPalette 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.35s forwards;
+}
+
+[draggable="true"].delay {
+  animation: slideInPalette 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.4s forwards;
+}
+
+@keyframes slideInPalette {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px) scale(0.8);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(3px) scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Dragging state styling */
+[draggable="true"]:active {
+  cursor: grabbing !important;
+  opacity: 0.7;
+  transform: scale(0.95);
+}
+
+/* Pulse effect for icons when hovering */
+@keyframes iconPulse {
+  0%, 100% {
+    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.3));
+  }
+  50% {
+    filter: drop-shadow(0 2px 8px rgba(88, 166, 255, 0.5)) drop-shadow(0 0 12px rgba(88, 166, 255, 0.3));
+  }
+}
+
+[draggable="true"]:hover [style*="filter"] {
+  animation: iconPulse 1.5s ease-in-out infinite;
+}
