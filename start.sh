@@ -34,13 +34,17 @@ fi
 # Activate virtual environment
 source venv/bin/activate 2>/dev/null || source venv/Scripts/activate 2>/dev/null
 
+# Upgrade pip to latest version
+echo "Upgrading pip..."
+python -m pip install --upgrade pip --quiet
+
 # Install dependencies
 echo "Installing backend dependencies..."
 pip install -q -r requirements.txt
 
 # Start backend in background
 echo "Starting backend on http://localhost:8000"
-uvicorn main:app --reload --port 8000 &
+python -m uvicorn main:app --reload --port 8000 &
 BACKEND_PID=$!
 
 cd ..
